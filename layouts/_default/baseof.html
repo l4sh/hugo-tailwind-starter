@@ -1,0 +1,12 @@
+<head>
+    {{ partial "meta.html" . }}
+    {{ partialCached "css.html" . }}
+<head>
+<body>
+    {{ partial "header.html" . }}
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ partialCached "js.html" . }}
+</body>
