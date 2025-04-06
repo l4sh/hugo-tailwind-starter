@@ -2,7 +2,14 @@ baseURL: https://example.org/
 languageCode: en-us
 title: Hugo tailwind starter
 enableRobotsTXT: true
-
+minify:
+  minifyOutput: true
+  minifyHTML: true
+  minifyCSS: true
+  minifyJS: true
+  minifySVG: true
+  minifyXML: true
+  disableXML: true
 
 build:
   buildStats:

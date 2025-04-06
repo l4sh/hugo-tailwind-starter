@@ -1,1 +1,3 @@
-<!-- <script src="{{ "js/script.js" | relURL }}"></script> -->
+{{ $jsFiles := resources.Match "js/*.js" }}
+{{ $bundle := $jsFiles | resources.Concat "js/bundle.js" | resources.Minify }}
+<script src="{{ $bundle.RelPermalink }}" defer></script>
